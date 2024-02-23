@@ -1,36 +1,30 @@
 # cleverthis
 
-FIXME: description
+A simple demonstration of a self-modifying program in Clojure.
 
 ## Installation
 
-Download from http://example.com/FIXME.
+Download from https://github.com/chipuni/CleverThis.
+
+Then run by
+
+    $ lein run
 
 ## Usage
 
-FIXME: explanation
+This program demonstrates that Clojure allows self-modification.
 
-    $ java -jar cleverthis-0.1.0-standalone.jar [args]
+Change the function in src/cleverthis/selfoptimizing.clj named
+complex-function to any complex function that takes three boolean
+inputs and gives one boolean output.
 
-## Options
+Then run the program. It will (eventually) output the smallest
+Clojure function using just the variables, `and`, `or`, and `not`.
 
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
 
 ## License
 
-Copyright © 2024 FIXME
+Copyright © 2024 Brent E Edwards
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at

@@ -49,16 +49,16 @@
 (defn verify-function 
   "This is a very explicit method to check whether complex-function and simple-function
   give the same results."
-  []
+  [function1 function2]
   (and
-   (= (complex-function true true true) (simple-function true true true))
-   (= (complex-function true true false) (simple-function true true false))
-   (= (complex-function true false true) (simple-function true false true))
-   (= (complex-function true false false) (simple-function true false false))
-   (= (complex-function false true true) (simple-function false true true))
-   (= (complex-function false true false) (simple-function false true false))
-   (= (complex-function false false true) (simple-function false false true))
-   (= (complex-function false false false) (simple-function false false false))))
+   (= (function1 true true true) (function2 true true true))
+   (= (function1 true true false) (function2 true true false))
+   (= (function1 true false true) (function2 true false true))
+   (= (function1 true false false) (function2 true false false))
+   (= (function1 false true true) (function2 false true true))
+   (= (function1 false true false) (function2 false true false))
+   (= (function1 false false true) (function2 false false true))
+   (= (function1 false false false) (function2 false false false))))
 
 (defn find-optimal-function 
   "Generate all possible combinations booleans and compare them to the desired function."
@@ -69,8 +69,10 @@
       (if (second sf)
         (do
           (eval (first sf))
-          (if (verify-function)
-            (first sf)
+          (if (verify-function complex-function simple-function)
+            (do
+              (println x)
+              (first sf))
             (recur (+ x 1))))
         (recur (+ x 1))))))
 
