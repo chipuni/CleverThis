@@ -18,6 +18,44 @@
   [x y z]
   true)
 
+                                        ; The next function is controversial.
+
+                                        ; My *goal* with this program is to demonstrate how easy it is for
+                                        ; Clojure code to generate code and use the code that it
+                                        ; generates.
+
+                                        ; The code below will eventually generate all combinations of
+                                        ; and, or, not, x, y, and z. This should be immediately obvious.
+
+                                        ; This goal has tension with efficiency. It is also clear that
+                                        ; the below code is NOT efficient:
+
+                                        ; One-half of the generated sexps are one element long (just 'x,
+                                        ; 'y, or 'z).
+
+                                        ; It allows for repeats to show (although I removed many repeats.)
+
+                                        ; It allows for mirror images to appear (for example, both '(and x y)
+                                        ; and '(and y x) ).
+
+                                        ; It allows for examples that are not in the base form (for example,
+                                        ; '(not (not x)) or '(or z z) ).
+
+                                        ; There are some programmers for whom this lack of optimization is
+                                        ; intolerable. If you are among them, and if you must see this code
+                                        ; optimized, please let me know. 
+
+                                        ; But I don't feel that optimizing is a good use of my time: The underlying
+                                        ; algorithm is *exponential* on the number of nodes.
+
+                                        ; It would better serve any time to create a different underlying algorithm
+                                        ; that isn't exponential, rather than try to polish this code that's
+                                        ; fundamentally flawed.
+
+                                        ; This algorithm is excellent at my goal -- to clearly demonstrate how easy Clojure
+                                        ; makes it to generate and execute code. Anything more complex would
+                                        ; obscure that goal.
+
 (defn gen-sexp
   "Input: An integer.
    Output: A tuple:
