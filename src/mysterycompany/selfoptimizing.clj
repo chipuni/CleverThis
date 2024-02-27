@@ -1,4 +1,4 @@
-(ns cleverthis.selfoptimizing)
+(ns mysterycompany.selfoptimizing)
 
 (defn complex-function
   "This is a complex function that other code will be optimizing."

@@ -1,10 +1,10 @@
-# cleverthis
+# mysterycompany
 
 A simple demonstration of a self-modifying program in Clojure.
 
 ## Installation
 
-Download from https://github.com/chipuni/CleverThis.
+Download from https://github.com/chipuni/MysteryCompany.
 
 Then run by
 
@@ -14,7 +14,7 @@ Then run by
 
 This program demonstrates that Clojure allows self-modification.
 
-Change the function in src/cleverthis/selfoptimizing.clj named
+Change the function in src/mysterycompany/selfoptimizing.clj named
 complex-function to any complex function that takes three boolean
 inputs and gives one boolean output.
 

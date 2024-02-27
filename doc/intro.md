@@ -1,3 +1,8 @@
-# Introduction to cleverthis
+# Introduction to MysteryCompany
 
-TODO: write [great documentation](http://jacobian.org/writing/what-to-write/)
+This code demonstrates how simple it is to generate and
+modify code in Clojure.
+
+It does not represent itself as the best way to examine and update code.
+
+

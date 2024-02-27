@@ -1,6 +1,6 @@
-(ns cleverthis.selfoptimizing-test
+(ns mysterycompany.selfoptimizing-test
   (:require [clojure.test :refer :all]
-            [cleverthis.selfoptimizing :refer :all]))
+            [mysterycompany.selfoptimizing :refer :all]))
 
 (deftest complex-function-test
   (testing "Check that the complex function hasn't changed."
